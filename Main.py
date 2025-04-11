@@ -47,7 +47,7 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 
 history = model.fit(
     x_train, y_train,
-    epochs=30, # CHANGE HERE
+    epochs=100, # CHANGE HERE
     batch_size=32,
     validation_data=(x_test, y_test),
     class_weight=weights_dict
@@ -68,3 +68,4 @@ plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.legend()
 plt.show()
+model.save("Models/100epoc.h5")
